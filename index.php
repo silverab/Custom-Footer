@@ -7,19 +7,197 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-
+	<link rel="stylesheet" href="css/main.css" type="text/css">
     <title>Josh</title>
     </style>
   </head>
   <body>
+	
+	<div class="container-fluid bg-light">
+   
+   <section>             
+    <div class="col-sm-12 col-md-10 offset-md-1">
+      <div class="row">           
 
+      <!-- Gallery Item Loop  -->
 
+         <div onclick="changeActiveState(1)" class="col-md-6 col-lg-4 py-4" data-toggle="modal" data-target="#exampleModal">
+          <div class="gallery-container">
+          <img src="https://www.ravenshoegroup.com/concept/codepen/gallery1.jpg" alt="Alt Name" class="image">
 
-<footer style="text-align: center; padding: 0%; position: absolute; bottom: 0px; left: 0px; width: 100%;">
-<p class="cp-text" style="background-color: #188fe1; color: black; padding: 10px;">
-    © 2020 Josh // Josh Zone Development, All Rights Reserved. <span id="datetime" style="color: white;"></span>
-</p>
-</footer>
+             <div class="overlay">
+              <p class="text p-2">
+                <span>Gallery Title</span><br>
+                <span class="small">Gallery Sub Title</span>
+                <button class="btn view-btn">VIEW</button>
+              </p>                            
+             </div>
+
+          </div>
+         </div> 
+
+      <!--  End  -->
+         
+        
+         <div onclick="changeActiveState(2)" class="col-md-6 col-lg-4 py-4" data-toggle="modal" data-target="#exampleModal">
+            <div class="gallery-container">
+               <img src="https://www.ravenshoegroup.com/concept/codepen/gallery2.jpg" alt="Alt Name" class="image">
+
+               <div class="overlay">
+                  <p class="text p-2">
+                     <span>Gallery Title 2</span><br>
+                     <span class="small">Gallery Sub Title 2</span>
+                     <button class="btn view-btn">VIEW</button>
+                  </p>                            
+               </div>
+
+            </div>
+         </div> 
+
+         <div onclick="changeActiveState(3)" class="col-md-6 col-lg-4 py-4" data-toggle="modal" data-target="#exampleModal">
+            <div class="gallery-container">
+               <img src="https://www.ravenshoegroup.com/concept/codepen/gallery3.jpg" alt="Alt Name" class="image">
+
+               <div class="overlay">
+                  <p class="text p-2">
+                     <span>Gallery Title 3</span><br>
+                     <span class="small">Gallery Sub Title 3</span>
+                     <button class="btn view-btn">VIEW</button>
+                  </p>                            
+               </div>
+
+            </div>
+         </div>
+
+    
+       <div>
+     </div>
+   </section>
+    
+</div>
+
+      
+<!-- MODAL -->
+<div class="modal fadeIn" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+ <div class="modal-dialog modal-lg modal-dialog-centered" role="document">   
+     
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
+   <div class="carousel-inner">
+     
+     <!--  Item 1 Loop  -->
+     <div class="carousel-item active" id="carousel-1">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Gallery Title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+            </button>
+         </div>
+
+         <div class="modal-body">
+            <img src="https://www.ravenshoegroup.com/concept/codepen/gallery1.jpg" id="currentImg-1" Title="" alt="Alt Name" class="image">
+         </div>
+         
+         <div class="modal-thumbs px-3 py-3">
+            <label>Gallery Images</label>
+            <ul>
+               <li class="px-1" onclick="showImage('https://www.ravenshoegroup.com/concept/codepen/gallery1.jpg','Title',1);">
+                  <div class="border"><img src="https://www.ravenshoegroup.com/concept/codepen/gallery1.jpg" alt="Alt Name" class="image"></div>                  
+               </li>
+               <li class="px-1" onclick="showImage('https://www.ravenshoegroup.com/concept/codepen/gallery2.jpg','Title',1);">
+                  <div class="border"><img src="https://www.ravenshoegroup.com/concept/codepen/gallery2.jpg" alt="Alt Name" class="image"></div>                  
+               </li>
+               <li class="px-1" onclick="showImage('https://www.ravenshoegroup.com/concept/codepen/gallery3.jpg','Title',1);">
+                  <div class="border"><img src="https://www.ravenshoegroup.com/concept/codepen/gallery3.jpg" alt="Alt Name" class="image"></div>                  
+               </li>
+               <li class="px-1" onclick="showImage('https://www.ravenshoegroup.com/concept/codepen/gallery1.jpg','Title',1);">
+                  <div class="border"><img src="https://www.ravenshoegroup.com/concept/codepen/gallery1.jpg" alt="Alt Name" class="image"></div>                  
+               </li>
+            </ul>
+         </div>              
+      </div>
+     </div>  
+     <!-- Item 1 End  -->
+       
+     <!--  Item 2 Loop  -->
+     <div class="carousel-item" id="carousel-2">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Gallery Title 2</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+            </button>
+         </div>
+
+         <div class="modal-body">
+            <img src="https://www.ravenshoegroup.com/concept/codepen/gallery2.jpg" id="currentImg-2" alt="Alt Name" class="image">
+         </div>
+         
+         <div class="modal-thumbs px-3 py-3">
+            <label>Gallery Images</label>
+            <ul>
+               <li class="px-1" onclick="showImage('https://www.ravenshoegroup.com/concept/codepen/gallery2.jpg','Title',2);">
+                  <div class="border"><img src="https://www.ravenshoegroup.com/concept/codepen/gallery2.jpg" alt="Alt Name" class="image"></div>                  
+               </li>
+               <li class="px-1" onclick="showImage('https://www.ravenshoegroup.com/concept/codepen/gallery3.jpg','Title',2);">
+                  <div class="border"><img src="https://www.ravenshoegroup.com/concept/codepen/gallery3.jpg" alt="Alt Name" class="image"></div>                  
+               </li>
+               <li class="px-1" onclick="showImage('https://www.ravenshoegroup.com/concept/codepen/gallery1.jpg','Title',2);">
+                  <div class="border"><img src="https://www.ravenshoegroup.com/concept/codepen/gallery1.jpg" alt="Alt Name" class="image"></div>                  
+               </li>
+            </ul>
+         </div>              
+      </div>
+     </div>  
+     <!-- Item 2 End  -->
+      
+     <!--  Item 3 Loop  -->
+     <div class="carousel-item" id="carousel-3">
+      <div class="modal-content">
+         <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Gallery Title 3</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+            </button>
+         </div>
+
+         <div class="modal-body">
+            <img src="https://www.ravenshoegroup.com/concept/codepen/gallery3.jpg" id="currentImg-3" alt="Alt Name" class="image">
+         </div>
+         
+         <div class="modal-thumbs px-3 py-3">
+            <label>Gallery Images</label>
+            <ul>
+               <li class="px-1" onclick="showImage('https://www.ravenshoegroup.com/concept/codepen/gallery3.jpg','Title',3);">
+                  <div class="border"><img src="https://www.ravenshoegroup.com/concept/codepen/gallery3.jpg" alt="Alt Name" class="image"></div>                  
+               </li>
+               <li class="px-1" onclick="showImage('https://www.ravenshoegroup.com/concept/codepen/gallery2.jpg','Title',3);">
+                  <div class="border"><img src="https://www.ravenshoegroup.com/concept/codepen/gallery2.jpg" alt="Alt Name" class="image"></div>                  
+               </li>
+            </ul>
+         </div>              
+      </div>
+     </div>  
+     <!-- Item 3 End  -->
+    
+     
+   </div> 
+  </div><!-- Carousel End -->
+   
+</div>   
+   
+<!-- Prev Next Arrows -->
+<a href="#carouselExampleFade" role="button" data-slide="prev" class="carousel-control-prev"><div class="arrow-left d-flex align-items-center text-center" href="#carouselExampleFade" role="button" data-slide="prev"><img src="https://www.ravenshoegroup.com/concept/codepen/arrow-left.png" width="20px" alt="Left Arrow"></div></a>
+<a href="#carouselExampleFade" role="button" data-slide="prev" class="carousel-control-next"><div class="arrow-right d-flex align-items-center text-center" href="#carouselExampleFade" role="button" data-slide="next"><img src="https://www.ravenshoegroup.com/concept/codepen/arrow-right.png" width="20px" alt="Right Arrow"></div></a>
+<!--  Arrows End   -->
+   
+</div><!-- Modal End  -->
+
+	<footer style="text-align: center; padding: 0%; position: absolute; bottom: 250px; left: 0px; width: 100%;">
+	<p class="cp-text" style="background-color: #188fe1; color: black; padding: 10px;">
+	    © 2020 Josh // Josh Zone Development, All Rights Reserved. <span id="datetime" style="color: white;"></span>
+	</p>
+	</footer>
 
   </body>
     <!-- Optional JavaScript -->
@@ -80,4 +258,5 @@
 
 
     </script>
+    <script src="js/script.js" type="text/JavaScript"></script>
 </html>
